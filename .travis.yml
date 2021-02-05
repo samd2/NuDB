@@ -4,7 +4,7 @@ sudo: false
 env:
   global:
     - BUILD_SYSTEM=cmake
-    - BOOST_URL='https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2'
+    - BOOST_URL=https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2
     - BOOST_ROOT=$TRAVIS_BUILD_DIR/_cache/boost_1_69_0
     - EP_CACHE_ROOT=$TRAVIS_BUILD_DIR/_cache/cmake_ep
     - CMAKE_ROOT=$TRAVIS_BUILD_DIR/_cache/cmake
