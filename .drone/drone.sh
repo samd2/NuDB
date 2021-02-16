@@ -5,9 +5,11 @@
 # (See accompanying file LICENSE.txt or copy at http://boost.org/LICENSE_1_0.txt)
 
 set -e
+set -x
 export TRAVIS_BUILD_DIR=$(pwd)
 export DRONE_BUILD_DIR=$(pwd)
 export TRAVIS_BRANCH=$DRONE_BRANCH
+export TRAVIS_EVENT_TYPE=$DRONE_BUILD_EVENT
 export VCS_COMMIT_ID=$DRONE_COMMIT
 export GIT_COMMIT=$DRONE_COMMIT
 export REPO_NAME=$DRONE_REPO
