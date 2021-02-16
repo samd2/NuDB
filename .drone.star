@@ -14,7 +14,7 @@ windowsglobalimage="cppalliance/dronevs2019"
 
 def main(ctx):
   return [
-  linux_cxx("COMMENT=docs Job 0", "g++", packages="docbook docbook-xml docbook-xsl xsltproc libsaxonhe-java default-jre-headless flex bison rsync", buildtype="d11be0edf8-dded1b7a0c", buildscript="drone", image="cppalliance/droneubuntu2004:1", environment={'COMMENT': 'docs', 'DRONE_JOB_UUID': 'b6589fc6ab'}, globalenv=globalenv),
+  linux_cxx("COMMENT=docs Job 0", "g++", packages="docbook docbook-xml docbook-xsl xsltproc libsaxonhe-java default-jre-headless flex bison rsync", buildtype="5a7d01e40a-dded1b7a0c", buildscript="drone", image="cppalliance/droneubuntu2004:1", environment={'COMMENT': 'docs', 'DRONE_JOB_UUID': 'b6589fc6ab'}, globalenv=globalenv),
   linux_cxx("VARIANT=coverage MATRIX_EVAL=CC=gcc-7 && CXX Job 1", "gcc-7", packages="g++-7 software-properties-common wget python-software-properties libstdc++6 binutils-gold gdb make ninja-build ccache python-pip npm libc6-dbg", buildtype="boost", buildscript="drone", image="cppalliance/droneubuntu1604:1", environment={'VARIANT': 'coverage', 'MATRIX_EVAL': 'CC=gcc-7 && CXX=g++-7', 'DRONE_JOB_UUID': '356a192b79', 'CODECOV_TOKEN': {'from_secret': 'codecov_token'}, 'COVERALLS_REPO_TOKEN': {'from_secret': 'coveralls_repo_token'}}, globalenv=globalenv),
   # not building  #
   #  osx_cxx("VARIANT=debug Job 2", "g++", packages="", buildtype="boost", buildscript="drone", xcode_version="10.1", environment={'VARIANT': 'debug', 'DRONE_JOB_UUID': 'da4b9237ba'}, globalenv=globalenv),

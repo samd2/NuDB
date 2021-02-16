@@ -11,8 +11,10 @@ if [ "$DRONE_JOB_UUID" = "356a192b79" ] ; then
     curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add - ;
     sudo apt-get update ;
     apt-get install -y nodejs;
+
 fi
 if [ "$DRONE_JOB_UUID" = "bd307a3ec3" ] ; then
     export UBSAN_SYMBOLIZER_PATH="$(which llvm-symbolizer-8)"
+
 fi
 

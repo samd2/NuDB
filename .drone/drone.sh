@@ -46,7 +46,7 @@ echo '==================================> SCRIPT'
 
  scripts/build-and-test.sh
 
-elif [ "$DRONE_JOB_BUILDTYPE" == "d11be0edf8-dded1b7a0c" ]; then
+elif [ "$DRONE_JOB_BUILDTYPE" == "5a7d01e40a-dded1b7a0c" ]; then
 
 echo '==================================> BEFORE_INSTALL'
 
