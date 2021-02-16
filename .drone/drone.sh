@@ -30,6 +30,7 @@ echo '==================================> BEFORE_INSTALL'
 
 echo '==================================> INSTALL'
 
+if [ "${MATRIX_EVAL}" != "" ] ; then eval "${MATRIX_EVAL}"; fi
 scripts/install-cmake.sh 3.14.0
 if [ $(uname) = "Darwin" ] ; then export PATH="${CMAKE_ROOT}/CMake.app/Contents/bin:${PATH}"; fi
 if [ $(uname) = "Linux" ] ; then export PATH="${CMAKE_ROOT}/bin:${PATH}"; fi
@@ -53,6 +54,7 @@ echo '==================================> BEFORE_INSTALL'
 
 echo '==================================> INSTALL'
 
+if [ "${MATRIX_EVAL}" != "" ] ; then eval "${MATRIX_EVAL}"; fi
 cd ..
 mkdir tmp && cd tmp
 git clone -b 'Release_1_8_15' --depth 1 https://github.com/doxygen/doxygen.git
